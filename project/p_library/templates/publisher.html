@@ -1,0 +1,11 @@
+{% load bootstrap4 %}
+
+<form class="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% for book in books %}
+    {% for publisher in publisher %}
+    <ul class="list-group">{{ publisher.name }}
+        <li class="list-group-item">{{book.name}}</li>
+      </ul>
+</form>
